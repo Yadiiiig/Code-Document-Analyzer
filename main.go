@@ -1,36 +1,28 @@
 package main
 
-import "log"
+import (
+	"bytes"
+	"fmt"
+	"log"
 
-// cda person is a struct type for a person records.
-type person struct {
-	Name   string
-	Phone  string
-	Gender string
-}
+	"github.com/Yadiiiig/Code-Document-Analyzer/internal"
+	"github.com/Yadiiiig/Code-Document-Analyzer/searchers"
+)
 
 func main() {
-	p := person{
-		Name:   "Foo Bar",
-		Phone:  "44864646",
-		Gender: "Male",
-	}
-	err := register_person(p)
+	lines, err := searchers.Read("_example_code/main.go")
 	if err != nil {
 		log.Println(err)
 	}
-}
 
-/*
-cda
-This is a function that adds a new person to a database.
-Argument:
-- person
-Returns:
-- error
-*/
-func register_person(p person) error {
-	// pseudo code
-	log.Println("Added user to database")
-	return nil
+	//fmt.Println(lines)
+	py := bytes.NewBufferString("")
+	for _, v := range lines {
+		internal.Splitter(&v)
+		//fmt.Println(v.RawText)
+		fmt.Fprintf(py, "['%s'], ", v.RawText)
+		searchers.FindFunctions(&v)
+	}
+
+	fmt.Println(py.String())
 }
