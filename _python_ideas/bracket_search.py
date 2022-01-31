@@ -9,3 +9,7 @@ input = ['package main'], [''], ['import "log"'], [''], ['// person is a struct 
     ['     return nil'], ['}']
 
 print(input)
+
+# Outcome:
+#
+# Get the line height and start / end position for the function start and end
