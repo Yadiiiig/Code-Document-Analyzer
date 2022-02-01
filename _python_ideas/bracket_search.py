@@ -19,7 +19,7 @@ SAVE index of element that starts function definition
 append current element (function declaration) to str/arr/dict
 append every element following until we find a closing bracket***
     -use boolean to keep track of everything inside of brackets?
-    -use bracket counter to count how many '{' are encountered   
+    -use bracket counter to count how many '{' are encountered
 
 """
 
@@ -37,19 +37,37 @@ for i in range(l):
 # for line in input:
     found_function = False
     if "".join(arr[i])[:4]=="func" and not found_function:
+        # save function name by looking for a name with a callsign -> ___()
+        # could split the line, look for ()
         found_function = True
-        func_name = arr[i][5:-2]
-        new_func = func_name(func_name)
-        new_func.index = i
+        line = str("".join(arr[i]))
+        line_arr = line.split()
+        
+        for w in line_arr:
+            print(w)
+            index_open = w.find("(")
+            index_close = w.find(")")
+            
+            print(f"{index_open} and {index_close}\n")
+            # print(f"{line[5:index_close]}")
+            
+            # if '(' in w or ')' in w:  print(w)
+        # print(line)
+
+
+        # func_name = line[5:-2]
+        # print(func_name)
+
+
+        # new_func = func_name(func_name)
+        # new_func.index = i
 
         if found_function:
             bracket_counter = 0
-            new_func.defn += "(everything following the current element)"
+            # new_func.defn += "(everything following the current element)"
             # func.defn+="\n".join(arr[i])
 
 print(func.defn)
-
-
 
 
 
