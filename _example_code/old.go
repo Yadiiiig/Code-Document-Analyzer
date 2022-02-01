@@ -42,6 +42,6 @@ func (person) foo(date string, age int) error {
 	return nil
 }
 
-func (h hello) foo(date string) (string, error) {
+func (hello) foo(date string) (string, error) {
 	return "", nil
 }

@@ -1,0 +1,429 @@
+{
+ "name": "main.go",
+ "original_name": "_example_code/main.go",
+ "extension": "go",
+ "amount_lines": 47,
+ "function_amount": 5,
+ "variables_amount": 0,
+ "functions": [
+  {
+   "name": "main",
+   "comment": "",
+   "oop_variable": "",
+   "variables": null,
+   "return_variables": null,
+   "LineHeight": 17
+  },
+  {
+   "name": "register_person",
+   "comment": "",
+   "oop_variable": "",
+   "variables": [
+    {
+     "name": "p",
+     "type": "person",
+     "comment": "",
+     "references": null
+    }
+   ],
+   "return_variables": null,
+   "LineHeight": 31
+  },
+  {
+   "name": " add_birthday",
+   "comment": "",
+   "oop_variable": "person",
+   "variables": [
+    {
+     "name": "date",
+     "type": "string",
+     "comment": "",
+     "references": null
+    }
+   ],
+   "return_variables": null,
+   "LineHeight": 37
+  },
+  {
+   "name": " foo",
+   "comment": "",
+   "oop_variable": "person",
+   "variables": [
+    {
+     "name": "date",
+     "type": "string",
+     "comment": "",
+     "references": null
+    },
+    {
+     "name": "age",
+     "type": "int",
+     "comment": "",
+     "references": null
+    }
+   ],
+   "return_variables": null,
+   "LineHeight": 41
+  },
+  {
+   "name": " foo",
+   "comment": "",
+   "oop_variable": "h hello",
+   "variables": [
+    {
+     "name": "date",
+     "type": "string",
+     "comment": "",
+     "references": null
+    },
+    {
+     "name": "",
+     "type": "string",
+     "comment": "",
+     "references": null
+    },
+    {
+     "name": "",
+     "type": "error",
+     "comment": "",
+     "references": null
+    }
+   ],
+   "return_variables": null,
+   "LineHeight": 45
+  }
+ ],
+ "lines": [
+  {
+   "line": 0,
+   "raw_text": "package main",
+   "text": null,
+   "length": 12,
+   "variables": null
+  },
+  {
+   "line": 1,
+   "raw_text": "",
+   "text": null,
+   "length": 0,
+   "variables": null
+  },
+  {
+   "line": 2,
+   "raw_text": "import \"log\"",
+   "text": null,
+   "length": 12,
+   "variables": null
+  },
+  {
+   "line": 3,
+   "raw_text": "",
+   "text": null,
+   "length": 0,
+   "variables": null
+  },
+  {
+   "line": 4,
+   "raw_text": "// person is a struct type for a person records.",
+   "text": null,
+   "length": 48,
+   "variables": null
+  },
+  {
+   "line": 5,
+   "raw_text": "type person struct {",
+   "text": null,
+   "length": 20,
+   "variables": null
+  },
+  {
+   "line": 6,
+   "raw_text": "\tName     string",
+   "text": null,
+   "length": 16,
+   "variables": null
+  },
+  {
+   "line": 7,
+   "raw_text": "\tPhone    string",
+   "text": null,
+   "length": 16,
+   "variables": null
+  },
+  {
+   "line": 8,
+   "raw_text": "\tGender   string",
+   "text": null,
+   "length": 16,
+   "variables": null
+  },
+  {
+   "line": 9,
+   "raw_text": "\tBirthday string",
+   "text": null,
+   "length": 16,
+   "variables": null
+  },
+  {
+   "line": 10,
+   "raw_text": "}",
+   "text": null,
+   "length": 1,
+   "variables": null
+  },
+  {
+   "line": 11,
+   "raw_text": "",
+   "text": null,
+   "length": 0,
+   "variables": null
+  },
+  {
+   "line": 12,
+   "raw_text": "type hello {",
+   "text": null,
+   "length": 12,
+   "variables": null
+  },
+  {
+   "line": 13,
+   "raw_text": "\tWorld string",
+   "text": null,
+   "length": 13,
+   "variables": null
+  },
+  {
+   "line": 14,
+   "raw_text": "}",
+   "text": null,
+   "length": 1,
+   "variables": null
+  },
+  {
+   "line": 15,
+   "raw_text": "",
+   "text": null,
+   "length": 0,
+   "variables": null
+  },
+  {
+   "line": 16,
+   "raw_text": "func main() {",
+   "text": null,
+   "length": 13,
+   "variables": null
+  },
+  {
+   "line": 17,
+   "raw_text": "\tp := person{",
+   "text": null,
+   "length": 13,
+   "variables": null
+  },
+  {
+   "line": 18,
+   "raw_text": "\t\tName:   \"Foo Bar\",",
+   "text": null,
+   "length": 20,
+   "variables": null
+  },
+  {
+   "line": 19,
+   "raw_text": "\t\tPhone:  \"44864646\",",
+   "text": null,
+   "length": 21,
+   "variables": null
+  },
+  {
+   "line": 20,
+   "raw_text": "\t\tGender: \"Male\",",
+   "text": null,
+   "length": 17,
+   "variables": null
+  },
+  {
+   "line": 21,
+   "raw_text": "\t}",
+   "text": null,
+   "length": 2,
+   "variables": null
+  },
+  {
+   "line": 22,
+   "raw_text": "\terr := register_person(p)",
+   "text": null,
+   "length": 26,
+   "variables": null
+  },
+  {
+   "line": 23,
+   "raw_text": "\tif err != nil {",
+   "text": null,
+   "length": 16,
+   "variables": null
+  },
+  {
+   "line": 24,
+   "raw_text": "\t\tlog.Println(err)",
+   "text": null,
+   "length": 18,
+   "variables": null
+  },
+  {
+   "line": 25,
+   "raw_text": "\t}",
+   "text": null,
+   "length": 2,
+   "variables": null
+  },
+  {
+   "line": 26,
+   "raw_text": "\tp.add_birthday(\"1998\")",
+   "text": null,
+   "length": 23,
+   "variables": null
+  },
+  {
+   "line": 27,
+   "raw_text": "}",
+   "text": null,
+   "length": 1,
+   "variables": null
+  },
+  {
+   "line": 28,
+   "raw_text": "",
+   "text": null,
+   "length": 0,
+   "variables": null
+  },
+  {
+   "line": 29,
+   "raw_text": "// This is a function that adds a new person to a database.",
+   "text": null,
+   "length": 59,
+   "variables": null
+  },
+  {
+   "line": 30,
+   "raw_text": "func register_person(p person) error {",
+   "text": null,
+   "length": 38,
+   "variables": null
+  },
+  {
+   "line": 31,
+   "raw_text": "\t// pseudo code",
+   "text": null,
+   "length": 15,
+   "variables": null
+  },
+  {
+   "line": 32,
+   "raw_text": "\tlog.Println(\"Added user to database\")",
+   "text": null,
+   "length": 38,
+   "variables": null
+  },
+  {
+   "line": 33,
+   "raw_text": "\treturn nil",
+   "text": null,
+   "length": 11,
+   "variables": null
+  },
+  {
+   "line": 34,
+   "raw_text": "}",
+   "text": null,
+   "length": 1,
+   "variables": null
+  },
+  {
+   "line": 35,
+   "raw_text": "",
+   "text": null,
+   "length": 0,
+   "variables": null
+  },
+  {
+   "line": 36,
+   "raw_text": "func (person) add_birthday(date string) {",
+   "text": null,
+   "length": 41,
+   "variables": null
+  },
+  {
+   "line": 37,
+   "raw_text": "\tperson.Birthday = date",
+   "text": null,
+   "length": 23,
+   "variables": null
+  },
+  {
+   "line": 38,
+   "raw_text": "}",
+   "text": null,
+   "length": 1,
+   "variables": null
+  },
+  {
+   "line": 39,
+   "raw_text": "",
+   "text": null,
+   "length": 0,
+   "variables": null
+  },
+  {
+   "line": 40,
+   "raw_text": "func (person) foo(date string, age int) error {",
+   "text": null,
+   "length": 47,
+   "variables": null
+  },
+  {
+   "line": 41,
+   "raw_text": "\treturn nil",
+   "text": null,
+   "length": 11,
+   "variables": null
+  },
+  {
+   "line": 42,
+   "raw_text": "}",
+   "text": null,
+   "length": 1,
+   "variables": null
+  },
+  {
+   "line": 43,
+   "raw_text": "",
+   "text": null,
+   "length": 0,
+   "variables": null
+  },
+  {
+   "line": 44,
+   "raw_text": "func (h hello) foo(date string) (string, error) {",
+   "text": null,
+   "length": 49,
+   "variables": null
+  },
+  {
+   "line": 45,
+   "raw_text": "\treturn \"\", nil",
+   "text": null,
+   "length": 15,
+   "variables": null
+  },
+  {
+   "line": 46,
+   "raw_text": "}",
+   "text": null,
+   "length": 1,
+   "variables": null
+  }
+ ],
+ "raw_bytes": "package mainimport \"log\"// person is a struct type for a person records.type person struct {\tName     string\tPhone    string\tGender   string\tBirthday string}type hello {\tWorld string}func main() {\tp := person{\t\tName:   \"Foo Bar\",\t\tPhone:  \"44864646\",\t\tGender: \"Male\",\t}\terr := register_person(p)\tif err != nil {\t\tlog.Println(err)\t}\tp.add_birthday(\"1998\")}// This is a function that adds a new person to a database.func register_person(p person) error {\t// pseudo code\tlog.Println(\"Added user to database\")\treturn nil}func (person) add_birthday(date string) {\tperson.Birthday = date}func (person) foo(date string, age int) error {\treturn nil}func (h hello) foo(date string) (string, error) {\treturn \"\", nil}",
+ "markdown_version": ""
+}

@@ -5,19 +5,12 @@ type Line struct {
 	RawText   string     `json:"raw_text"` // Complete string of line
 	Text      []string   `json:"text"`
 	Length    int        `json:"length"`    // Length of the text
-	Functions []Function `json:"functions"` // Array of all the referenced functions
 	Variables []Variable `json:"variables"` // Array of all the referenced variables
-}
-
-type Function struct {
-	Name            string     `json:"name"`
-	Comment         string     `json:"comment"`
-	Variables       []Variable `json:"variables"`
-	ReturnVariables []Variable `json:"return_variables"`
 }
 
 type Variable struct {
 	Name       string      `json:"name"`
+	Type       string      `json:"type"`
 	Comment    string      `json:"comment"`
 	References []Reference `json:"references"`
 }
